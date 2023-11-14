@@ -1,0 +1,44 @@
+{% extends "layout4.html" %}
+{% block content %}
+<form action="/home/studentlogin/student" align="right">
+    <input type="submit" value="Back" > 
+    </form>
+    <br>
+    <div class="container py-10 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+              <div class="card-body p-5 text-center">
+    
+                <div class="mb-md-5 mt-md-4 pb-5">
+        <form method='POST' enctype='multipart/form-data' >
+            {{form.hidden_tag()}}
+
+            
+            {{ form.teamname(class="form-control form-control-lg",placeholder="Teamname") }}
+
+            <br>
+           
+            {{ form.guidename(class="form-control form-control-lg",placeholder="Guidename") }}
+            <br>
+          
+            {{ form.project(class="form-control form-control-lg",placeholder="Project title") }}
+            <br>
+          
+            {{ form.domain(class="form-control form-control-lg",placeholder="Technology") }}
+            <br>
+          
+            {{ form.file(class="form-control form-control-lg") }}
+            <br>
+            {{ form.submit(class="btn btn-outline-info") }}
+            <br>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+  
+{% endblock content %}

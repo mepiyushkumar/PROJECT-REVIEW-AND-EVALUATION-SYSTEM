@@ -1,0 +1,57 @@
+{%  extends "layout6.html" %}
+{% block content %}
+<a href="\home\hodpage">
+<form method="post" action="/home/hodpage" align="right">
+    <input type="submit" value="Back" >
+    </form>
+</a>
+<br>
+
+<div class="content-section tb">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Project Title</th>
+            <th scope="col">Technology</th>
+            <th scope="col">Abstract</th>           
+            <th scope="col">Guide Name</th>
+           
+           
+          </tr>
+        </thead>
+        
+
+      <tbody>
+       
+        {% for abs in data %} 
+            
+           <tr>
+               <td>{{abs.id}}</td>
+
+              <td>
+                <a href="{{url_for('name',id=abs.id)}}">{{abs.teamname}}</a></td>
+              <td>{{ abs.title}}</td>
+              <td>{{ abs.technology}}</td>
+
+
+              <td>
+                <!--
+                <a href="{{url_for('download_file',id=abs.id)}}">{{ abs.filename }}</a> -->
+                <a href="{{url_for('download_files',id=abs.id)}}">{{ abs.filename }}</a>
+            </td>
+             
+              <td>{{abs.guidename}}</td>
+
+  
+              
+    </tr>
+    {% endfor %}
+     </tbody>
+      
+      
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,55 @@
+{%  extends "layout4.html" %}
+{% block content %}
+<form action="/home/studentlogin/student" align="right">
+    <input type="submit" value="Back" >
+    </form>
+</a>
+<div class="content-section tb">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Project Title</th>
+            <th scope="col">File Name</th>
+            <th scope="col">Suggestions</th>
+            <th scope="col">Status</th>
+            <th scope="col">Guide Name</th>
+            <th scope="col">Action</th>
+            
+            
+          </tr>
+        </thead>
+        
+ 
+      <tbody>
+        {% for x in data %}
+           <tr>
+               <td>{{x.Abstractshod.id}}</td>
+              <td>{{x.Abstractshod.teamname }}</td>
+              <td>{{x.Replyhod.title}}</td>
+              <td><a href="{{url_for('download_filevrh',id=x.Abstractshod.id)}}">{{x.Abstractshod.filename }}</a></td>
+              <td>{{x.Replyhod.reply}}</td>
+              <td>{{x.Replyhod.status}}</td>
+              <td>{{x.Abstractshod.guidename}}</td>
+              <td>
+                {% if x.Replyhod.status=='Reject'%}
+                <a href="{{url_for('delete_replay_hod',id=x.Replyhod.id)}}" onclick="return confirm('Are you sure want to delete')" >
+                <button class="btn-danger">Delete</button>
+                </a>
+                {% else %}
+                <a href="{{url_for('upload_hod_final', id=x.Abstractshod.id)}}">Final upload</a>
+                {%endif%}
+              </td>
+            
+              
+           </tr>
+        {% endfor %}
+       
+     </tbody>
+      
+      
+</div>
+
+
+{% endblock content %}s

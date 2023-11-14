@@ -1,0 +1,80 @@
+<!--
+
+  
+
+    <div class="content-section">
+       <h1 style="text-align: center;">HOD  Page</h1>
+        <h3 style="text-align: center;">Choose an option </h3>
+    <form method="POST" action="">
+        <input type="submit" value='View Project details' name="submit1"/><br>
+        <input type="submit" value='View Project Status' name="submit2"/><br>
+        
+    </form>
+    </div>
+  
+-->
+{% extends "layout3.html" %}
+{% block content %}
+<html>
+<head>
+    </head>
+<body background="static/uploads/215.jpg";>
+
+<form action="/home" align="right">
+    <input type="submit" value="Back" >
+    </form>
+</a>
+<br>
+<br>
+    <div class="content-section">
+<div class="guidy">
+<div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+              <div class="card-body p-5 text-center">
+            <div class="mb-md-5 mt-md-4 pb-5">
+                 
+
+    <div class="content-section">
+      <h3 style='text-align: center;color: white'>HOD page</h3><br> 
+       <br>
+      
+      <table class=buttons>
+<tr>
+    <td>
+<a href="/home/hodlogin/hodpage/vpdh"> 
+            <button>View Project Details</button><br><br>
+        </td>
+    </tr>
+ <tr>
+    <td>   
+        <a href="/home/hodlogin/hodpage/vpsh"> 
+            <button>View Project Status</button><br><br>
+
+    </td>
+</tr>
+
+
+<tr>
+    <td>
+<a href="/home/hodlogin/hodpage/vd"> 
+            <button>View Final Details</button><br><br>
+        </td>
+    </tr>
+
+
+</div>
+</body>
+</html>
+    <!--
+    <div class="content-section">
+        <h3>Our Flask Buttons</h3>
+    <form method="post" action="/">
+        <input type="submit" value='Upload Project details to Guide' name="submit"/><br>
+        <input type="submit" value='Upload Project details to HOD' name="submit"/><br>
+        <input type="submit" value='View reply from Guide' name="submit"/><br>
+        <input type="submit" value='View reply from HOD' name="submit"/><br>
+    </form>
+    </div>
+  -->
+{% endblock content %}

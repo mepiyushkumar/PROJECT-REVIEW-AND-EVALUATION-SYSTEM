@@ -1,0 +1,37 @@
+
+{%  extends "layout1.html" %}
+{% block content %}
+<div class="content-section">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Project Title</th>
+            <th scope="col">Suggestions</th>
+            <th scope="col">Status</th>
+            <th scope="col">Guide Name</th>
+          </tr>
+        </thead>
+        
+
+      <tbody>
+        {% for x in data %}
+           <tr>
+               <td></td>
+              <td>{{x.User.teamname }}</td>
+              <td>{{x.Abstracts.title}}</td>
+              <td></td>
+              <td></td>
+              <td>{{x.User.guidename}}</td>
+              
+           </tr>
+        {% endfor %}
+       
+     </tbody>
+      
+      
+</div>
+
+
+{% endblock content %}s

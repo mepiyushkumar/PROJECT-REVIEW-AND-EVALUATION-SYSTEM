@@ -1,0 +1,91 @@
+{% extends "layout1.html" %}
+{% block content %}
+<body style="background-image : url('static/uploads/22.jpg');">
+<div class="login">
+    <div class="container py-10 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12">
+            <div class="card bg-dark text-white" style="border-radius: 1rem;">
+              <div class="card-body p-5 text-center">
+    
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Register</legend>
+                <div class="form-group">
+                    {% if form.teamname.errors %}
+                        {{ form.teamname(class="form-control form-control-lg is-invalid",placeholder="teamname") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.teamname.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.teamname(class="form-control form-control-lg",placeholder="teamname") }}
+                    {% endif %}
+                    <br>
+                </div>
+                <div class="form-group">
+                    
+
+                    {% if form.guidename.errors %}
+                        {{ form.guidename(class="form-control form-control-lg is-invalid",placeholder="guidename") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.guidename.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.guidename(class="form-control form-control-lg",placeholder="guidename") }}
+                    {% endif %}
+                    <br>
+                </div>
+                
+                <div class="form-group">
+                    
+                    {% if form.password.errors %}
+                        {{ form.password(class="form-control form-control-lg is-invalid",placeholder="password") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.password(class="form-control form-control-lg",placeholder="password") }}
+                    {% endif %}
+                    <br>
+                </div>
+                <div class="form-group">
+                   
+                    {% if form.confirm_password.errors %}
+                        {{ form.confirm_password(class="form-control form-control-lg is-invalid",placeholder="confirm password") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.confirm_password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.confirm_password(class="form-control form-control-lg" ,placeholder="confirm password") }}
+                    {% endif %}
+                    <br>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+            <br>
+        </form>
+    </div>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Have An Account? <a class="ml-2" href="{{ url_for('studentlogin') }}">Sign In</a>
+        </small>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+{% endblock content %}

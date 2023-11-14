@@ -1,0 +1,31 @@
+{% extends "layout1.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method='POST' enctype='multipart/form-data' >
+            {{form.hidden_tag()}} 
+
+            {{ form.teamname.label(class="form-control-label") }}
+            {{ form.teamname(class="form-control form-control-lg") }}
+
+            {{ form.hodname.label(class="form-control-label") }}
+            {{ form.hodname(class="form-control form-control-lg") }}
+
+            {{ form.guidename.label(class="form-control-label") }}
+            {{ form.guidename(class="form-control form-control-lg") }}
+
+
+            {{ form.project.label(class="form-control-label") }}
+            {{ form.project(class="form-control form-control-lg") }}
+
+            {{ form.domain.label(class="form-control-label") }}
+            {{ form.domain(class="form-control form-control-lg") }}
+
+            {{ form.file.label(class="form-control-label") }}
+            {{ form.file(class="form-control form-control-lg") }}
+
+            {{ form.submit(class="btn btn-outline-info") }}
+            
+        </form>
+    </div>
+  
+{% endblock content %}

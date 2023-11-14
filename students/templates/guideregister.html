@@ -1,0 +1,86 @@
+{% extends "layout2.html" %}
+{% block content %}
+<body style="background-image  : url('static/1.jpeg');">
+
+    <div class="login">
+        <div class="container py-10 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                  <div class="card-body p-5 text-center">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Register</legend>
+                <div class="form-group">
+                    {% if form.username.errors %}
+                        {{ form.username(class="form-control form-control-lg is-invalid", placeholder="username") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.username.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.username(class="form-control form-control-lg" ,placeholder="username") }}
+                    {% endif %}
+                    <br>
+                </div>
+                <div class="form-group">
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid",placeholder="email") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg" ,placeholder="email") }}
+                    {% endif %}
+                </div>
+                <br>
+                <div class="form-group">
+                    {% if form.password.errors %}
+                        {{ form.password(class="form-control form-control-lg is-invalid",placeholder="password") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.password(class="form-control form-control-lg",placeholder="password") }}
+                    {% endif %}
+                </div>
+                <br>
+                <div class="form-group">
+                    {% if form.confirm_password.errors %}
+                        {{ form.confirm_password(class="form-control form-control-lg is-invalid" ,placeholder="confirm password") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.confirm_password.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.confirm_password(class="form-control form-control-lg" ,placeholder="confirm password") }}
+                    {% endif %}
+                </div>
+                <br>
+            </fieldset>
+            <br>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        <br>
+    </div>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Already Have An Account? <a class="ml-2" href="{{ url_for('guidelogin') }}">Sign In</a>
+        </small>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,57 @@
+{%  extends "layout4.html" %}
+{% block content %}
+
+<form action="/home/studentlogin/student" align="right">
+    <input type="submit" value="Back" >
+    </form>
+</a>
+<div class="content-section tb">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Project Title</th>
+            <th scope="col">File Name</th>
+            <th scope="col">Suggestions</th>
+            <th scope="col">Status</th>
+            <th scope="col">Guide Name</th>
+            <th scope="col">Action</th>
+            
+            
+          </tr>
+        </thead>
+        
+ 
+      <tbody>
+        {% for x in data %}
+           <tr>
+               <td>{{x.Reply.id}}</td>
+              <!--<td> <a href="{{url_for('name',id=x.Abstracts.id)}}">{{x.Abstracts.teamname}}</a></td>-->
+              <td>{{x.Abstracts.teamname}}</td>
+              <td>{{x.Reply.title}}</td>
+              <td><a href="{{url_for('download_files',id=x.Abstracts.id)}}">{{ x.Abstracts.filename }}</a></td>
+              <td>{{x.Reply.reply}}</td>
+              <td>{{x.Reply.status}}</td>
+              <td>{{x.Abstracts.guidename}}</td>
+              <td>
+              {% if x.Reply.status=='Reject'%}
+              <a href="{{url_for('delete_replay_guide',id=x.Reply.id)}}" onclick="return confirm('Are you sure want to delete')" >
+              <button class="btn-danger">Delete</button>
+              </a>
+              {% else %}
+              <a href="{{url_for('upload_hod_simplyfy', id=x.Abstracts.id)}}">Upload To Hod</a>
+              {%endif%}
+            </td>
+            
+              
+           </tr>
+        {% endfor %}
+       
+     </tbody>
+      
+      
+</div>
+
+
+{% endblock content %}s

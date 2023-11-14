@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Details</title>
+</head>
+<body>
+
+<br>
+<div class='content-section'>
+<h4>Welcome : </h4>
+<a href="\home\Hodpage">
+<form method="post" action="/home/Hodpage" align="right">
+   	<input type="submit" value="Back" >
+	</form>
+</a>
+	<br>
+<form align="right">
+   	<input type="submit" value="Logout" >
+	</form>
+<h3 style="text-align: center;">Project Details</h3>
+
+
+<table>
+         <thead>
+            <tr>
+               <th>Team Name</th>
+               <th>Project Title</th>
+               <th>Department</th>
+               <th>Download</th>
+               <th>Status</th>
+               <th>Guide Name</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for detail in details %}
+               <tr>
+                  <td>{{ detail.Teamname }}</td>
+                  <td>{{ detail.ProjectTitle }}</td>
+                  <td>{{ detail.Department }}</td>
+                  <td>{{ detail.Download }}</td>
+                  <td>{{detail.Status}}</td>
+                  <td>{{detail.GuideName}}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+
+</div>
+</body>
+</html>
+
+
+{% endblock content %}

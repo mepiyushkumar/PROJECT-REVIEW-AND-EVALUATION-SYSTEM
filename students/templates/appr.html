@@ -1,0 +1,26 @@
+{% extends "layout1.html" %}
+{% block content %}
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Team details</title>
+</head>
+<body>
+ <div class="content-section">
+    {% for abs in abstracts %}
+        <h2>Team id : {{abs.id}} <br>
+            Team Name : {{abs.teamname}}<br>
+            Project Title : {{abs.title}}<br>
+            Status : Approved 
+
+
+            <br>
+        </h2>
+        {% endfor %}
+</div>
+
+</body>
+</html>
+
+
+{% endblock content %}

@@ -1,0 +1,47 @@
+{%  extends "layout6.html" %}
+{% block content %}
+<!doctype html>
+<a href="\home\hodpage">
+<form method="post" action="/home/hodpage" align="right">
+    <input type="submit" value="Back" >
+    </form>
+</a>
+<br>
+<body style="background-image  : url('static/uploads/215.jpg');">
+<div class="content-section tb">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Project Title</th>
+            <th scope="col">Abstract</th>
+           
+            <th scope="col">Guide Name</th>
+          </tr>
+        </thead>
+        
+
+      <tbody>
+       
+        {% for absh in data %} 
+            
+           <tr>
+               <td>{{absh.id}}</td>
+
+              <td>
+                <a href="{{url_for('nameh',id=absh.id)}}">{{absh.teamname}}</a></td>
+              <td>{{ absh.title}}</td>
+              <td><a href="{{url_for('download_fileh',id=absh.id)}}">{{ absh.filename }}</a></td>
+             
+              <td>{{absh.guidename}}</td>
+              
+        {% endfor %}
+    </tr>
+     </tbody>
+       
+      
+</div>
+</body>
+
+{% endblock content %}

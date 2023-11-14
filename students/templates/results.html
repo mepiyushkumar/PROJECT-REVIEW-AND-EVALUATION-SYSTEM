@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <form action="/home" align="right">
+    <input type="submit" value="Back" >
+    </form>
+
+    <meta charset="utf-8">
+    <link rel="icon" href="http://obj-cache.cloud.ruanbekker.com/favicon.ico">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Similarity search</title>
+
+  </head>
+  <body style="background-image  : url('static/uploads/27.jpg');">
+
+  <div class="container">
+    <div style="background:transparent !important" class="jumbotron">
+      <div style="font-family: 'Pacifico';">
+        <p>
+          
+          <center>
+          <b><h1>Project Title Similarity Search</h1></b>
+          </center>
+          
+        </p>
+      </div>
+    </div>
+
+    <form action="/search" method="post">
+      <div class="input-group">
+        <input type="text" class="form-control input-lg" name="input" placeholder="Search" autofocus>
+        <div class="input-group-btn">
+          <button class="btn btn-primary btn-lg" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+  <center><h4><b>Showing {{ res['total'] }} results</b><h4></center>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th><h3><b>Document</b></32></th>
+        <th><h3><b>Team Name</b></h3></th>
+        
+      </tr>
+    </thead>
+
+{% for hit in res['hits'] %}
+    <tbody>
+      <tr>
+        {% set testing = hit['body'].split(",")  %}
+
+
+        {% if testing[0]!='title' and testing[1]!='teamname' %}
+        <td><h4><b>{{testing[0] }}<b><h4></td>
+          <td><h4><b>{{testing[1] }}<b><h4></td> 
+        {%endif%}
+    
+
+         
+                  
+      </tr>
+
+
+    </tbody>
+{% endfor %}
+  </table>
+      </div>
+    </div>
+  </body>
+</html>

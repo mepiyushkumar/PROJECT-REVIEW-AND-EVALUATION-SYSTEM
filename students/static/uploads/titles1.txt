@@ -1,0 +1,54 @@
+3Rs.
+Detection of Malicious URLs.
+Multimode  surveillance system for online examination.
+Code Comment Generator.
+Automatic Text Summarization using machine learning techniques.
+Polypredix.
+Automated mcq generator.
+Building a voice based image caption generator using deep learning techniques.
+Diagnosis of Polycystic Ovary Syndrome Using Machine Learning Algorithms 
+An Innovative Feature-selection method for Human Activity Recognition in Videos
+Feature extraction to detect diabetic retinopathy from retinal images 
+Organic solutions for plant nurture
+A segment based technique for detecting exudate from retinal images
+Heart and Breast Cancer disease prediction using deep learning
+Identification of Age related macular degeneration using ML techniques
+Hypoglycemia prediction system
+Endometrial Cancer Detection using Convolutional Neural Networks
+Improved Optic Cup and Disc Segmentation in Glaucomatic Images
+Depression Analysis using What's App Text
+Xpand Reality
+Multimodal Stress Detection System
+Prediction of Thyroid Disease at early stage of Diagnosis
+Adversarial Text-to-Image Synthesis
+GNITS-AMICA
+Paddy Leaf disease recognition and Remedy Prediction
+Crop Recommendation System using Machine Learning
+Eye Disease Data Augmentation using Generative Adversarial Networks
+Mobile Application for Student Online Exchange using Flutter
+Start-up Success Prediction
+Autism Spectrum Disorder Detection
+Personality Classification from Text by Hybrid Deep Learning Techniques
+Summarization of Research Articles using Deep Learning Technique
+Song Recommender System based on Emotions
+Stress detection in women using speech analysis 
+BookMySports
+Automatic power monitoring system for smart classroom
+Facial and Speech Emotion based Music Recommendation System
+Deep Learning Model with Progressive GAN for Diabetic Retinopathy
+Project Review and Evaluation System
+Bus Tracking and Virtual Buspass:Easybus
+WhatsApp Web Clone
+Soil Fertility, Health and Crop Prediction
+Student Surveillance System for Medical Assistance in campus
+Food calorie estimation using image segmentation
+Sarcasm  detection  with contextual features
+Gnits Merchandising
+We Gesture
+Segmentation of Lung Regions with Juxta-Pleura Nodules using Image Processing Techniques
+Implementation of autonomous vehicles using deep learning
+GNITS-Now
+Start up  revenue prediction
+Crop price prediction
+Crop disease prediction
+Lane Prediction for self driving cars

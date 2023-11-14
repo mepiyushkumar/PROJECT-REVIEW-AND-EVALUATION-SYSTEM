@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.submit1(class="btn btn-outline-info") }}
+            </div>
+            <div class="form-group">
+                {{ form.submit2(class="btn btn-outline-info") }}
+            </div>
+            <div class="form-group">
+                {{ form.submit3(class="btn btn-outline-info") }}
+            </div>
+            <div class="form-group">
+                {{ form.submit4(class="btn btn-outline-info") }}
+            </div>
+
+          
+        </form>
+    </div>
+  
+{% endblock content %}
